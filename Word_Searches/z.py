@@ -1,6 +1,7 @@
 from func import s_vertical
 from func import horiz_to_vert
 from func import horiz_to_vert2
+from func import diag_sub
 
 def main():
     f = open("grid")
@@ -22,8 +23,11 @@ def main():
 #    print("gl split : ", gl)
 #    print('')
     t = ''.join(test)
-    
     print("test : ", test)
+    test2 = diag_sub(grid_line).split()
+    t2 = ''.join(test2)
+    print("test2 : ", test2)
 
+    
 if __name__ == "__main__":
     main()
