@@ -34,10 +34,12 @@ def horiz_to_vert2(grid):
     return(s)
 
 def diag_sub(grid):
-    l = grid.find('\n')
+    l = grid.find('\n') + 1
     s = ''
-    for j in range(l):
-        for i in range(j + l + 1, len(grid), l + 2):
+    h = grid.count('\n')
+    for j in range(1, h):
+        print(l*j)
+        for i in range(l * j, len(grid), l + 1):
             if grid[i] == '\n':
                 break
             if j % 2 == 0:
